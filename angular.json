@@ -80,9 +80,18 @@
           "options": {
             "browserTarget": "loyolaorsino:build"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          }
         }
       }
     }
   },
-  "defaultProject": "loyolaorsino"
+  "defaultProject": "loyolaorsino",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
