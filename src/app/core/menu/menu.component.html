@@ -1,0 +1,54 @@
+<div class="d-none d-lg-flex h-100 justify-content-right align-items-center">
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/imprint" routerLinkActive="active">Imprint</a>
+  <a routerLink="/privacy-policy" routerLinkActive="active">Privacy Policy</a>
+</div>
+<i class="d-lg-none menu-icon bi bi-list" (click)="toggleMenu()"></i>
+
+<div
+  [ngClass]="{
+    menu: true,
+    opened: menuOpened,
+    'bg-white': true,
+    'd-lg-none': true
+  }"
+>
+  <div class="d-lg-none menu-wrapper d-flex flex-column h-100 p-2">
+    <div class="menu-header d-flex justify-content-between w-100">
+      <div class="d-flex h-100 justify-content-left align-items-center"></div>
+      <div class="d-flex h-100 justify-content-right align-items-center">
+        <i class="menu-icon bi bi-x" (click)="toggleMenu()"></i>
+      </div>
+    </div>
+    <div
+      class="
+        menu-content
+        flex-grow-1
+        overflow-auto
+        d-flex
+        flex-column
+        justify-content-center
+        align-items-center
+      "
+    >
+      <a routerLink="/home" routerLinkActive="active" (click)="toggleMenu()"
+        >Home</a
+      >
+
+      <hr />
+
+      <a routerLink="/imprint" routerLinkActive="active" (click)="toggleMenu()"
+        >Imprint</a
+      >
+
+      <hr />
+
+      <a
+        routerLink="/privacy-policy"
+        routerLinkActive="active"
+        (click)="toggleMenu()"
+        >Privacy Policy</a
+      >
+    </div>
+  </div>
+</div>

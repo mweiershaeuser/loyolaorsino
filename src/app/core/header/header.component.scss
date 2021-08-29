@@ -1,0 +1,15 @@
+@import "src/variables";
+
+.header {
+  position: absolute;
+  height: $header-space;
+  z-index: $header-z-index;
+}
+
+.header-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  margin: 0;
+}

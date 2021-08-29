@@ -1,0 +1,62 @@
+@import "src/variables";
+@import "src/theme";
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  z-index: $menu-z-index;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.opened {
+  height: 100vh;
+}
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.menu-header {
+  min-height: $header-space;
+}
+
+/* Necessary for Flexbox to work: https://medium.com/@stephenbunch/how-to-make-a-scrollable-container-with-dynamic-height-using-flexbox-5914a26ae336 */
+.menu-wrapper,
+.menu-content {
+  min-height: 0;
+}
+
+a[routerLink] {
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px 0;
+
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  color: map-get($theme-colors, "secondary");
+  border: 5px hidden map-get($theme-colors, "secondary");
+
+  transition: 0.5s;
+}
+
+a[routerLink]:hover {
+  border-style: solid;
+}
+
+.active {
+  color: map-get($theme-colors, "primary") !important;
+  border-color: map-get($theme-colors, "primary") !important;
+}
+
+hr {
+  width: 50px;
+  border-top: 5px solid map-get($theme-colors, "secondary");
+  border-radius: 5px;
+}

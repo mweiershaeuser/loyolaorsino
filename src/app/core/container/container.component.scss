@@ -1,0 +1,11 @@
+@import "src/variables";
+
+header {
+  min-height: $header-space;
+}
+
+/* Necessary for Flexbox to work: https://medium.com/@stephenbunch/how-to-make-a-scrollable-container-with-dynamic-height-using-flexbox-5914a26ae336 */
+.container-wrapper,
+.content {
+  min-height: 0;
+}
