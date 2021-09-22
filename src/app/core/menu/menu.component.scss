@@ -1,6 +1,55 @@
 @import "src/variables";
 @import "src/theme";
 
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.menu-header {
+  min-height: $header-space;
+}
+
+/* Necessary for Flexbox to work: https://medium.com/@stephenbunch/how-to-make-a-scrollable-container-with-dynamic-height-using-flexbox-5914a26ae336 */
+.mobile-menu,
+.menu-content {
+  min-height: 0;
+}
+
+/* Desktop Menu */
+
+.desktop-menu a[routerLink] {
+  text-decoration: none;
+  margin-left: 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  color: map-get($theme-colors, "primary");
+
+  transition: 0.5s;
+}
+
+.desktop-menu a[routerLink]:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px map-get($theme-colors, "primary");
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.desktop-menu a[routerLink]:hover {
+  color: map-get($theme-colors, "primary");
+}
+
+.desktop-menu a[routerLink]:hover:after {
+  transform: scaleX(1);
+  transform-origin: 0% 50%;
+}
+
+/* Mobile Menu */
+
 .menu {
   position: absolute;
   top: 0;
@@ -16,22 +65,7 @@
   height: 100vh;
 }
 
-.menu-icon {
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.menu-header {
-  min-height: $header-space;
-}
-
-/* Necessary for Flexbox to work: https://medium.com/@stephenbunch/how-to-make-a-scrollable-container-with-dynamic-height-using-flexbox-5914a26ae336 */
-.menu-wrapper,
-.menu-content {
-  min-height: 0;
-}
-
-a[routerLink] {
+.mobile-menu a[routerLink] {
   text-decoration: none;
   padding: 10px;
   margin: 10px 0;
@@ -40,19 +74,14 @@ a[routerLink] {
   font-weight: bold;
   text-transform: uppercase;
 
-  color: map-get($theme-colors, "secondary");
-  border: 5px hidden map-get($theme-colors, "secondary");
+  color: map-get($theme-colors, "primary");
+  border: 5px hidden map-get($theme-colors, "primary");
 
   transition: 0.5s;
 }
 
-a[routerLink]:hover {
+.mobile-menu a[routerLink]:hover {
   border-style: solid;
-}
-
-.active {
-  color: map-get($theme-colors, "primary") !important;
-  border-color: map-get($theme-colors, "primary") !important;
 }
 
 hr {
