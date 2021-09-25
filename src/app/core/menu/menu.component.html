@@ -9,8 +9,8 @@
   "
 >
   <a routerLink="/home">Home</a>
-  <a routerLink="/home" fragment="stimmen">Stimmen</a>
-  <a routerLink="/home" fragment="erinnerungen">Erinnerungen</a>
+  <a routerLink="/home" fragment="sheet-music">Notenblatt</a>
+  <a routerLink="/home" fragment="memories">Erinnerungen</a>
 </div>
 <i class="d-lg-none menu-icon bi bi-list" (click)="toggleMenu()"></i>
 
@@ -44,13 +44,13 @@
 
       <hr />
 
-      <a routerLink="/home" fragment="stimmen" (click)="toggleMenu()">
-        Stimmen
+      <a routerLink="/home" fragment="sheet-music" (click)="toggleMenu()">
+        Notenblatt
       </a>
 
       <hr />
 
-      <a routerLink="/home" fragment="erinnerungen" (click)="toggleMenu()">
+      <a routerLink="/home" fragment="memories" (click)="toggleMenu()">
         Erinnerungen
       </a>
     </div>
