@@ -6,6 +6,7 @@ import { ContentComponent } from './core/content/content.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { HeaderComponent } from './core/header/header.component';
 import { MenuComponent } from './core/menu/menu.component';
+import { SectionComponent } from './shared/components/section/section.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -18,6 +19,7 @@ describe('AppComponent', () => {
         MenuComponent,
         ContentComponent,
         FooterComponent,
+        SectionComponent,
       ],
     }).compileComponents();
   });
