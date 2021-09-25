@@ -1,13 +1,18 @@
 <section
-  class="px-4"
+  class="px-4 d-flex"
   [ngClass]="{
     'min-vh-100': fullHeight
   }"
   [ngStyle]="{
-    background: background
+    background: background,
+    'background-position': bgPosition
   }"
 >
-  <div class="content">
+  <div
+    class="content w-100 d-flex flex-column justify-content-{{
+      vertical
+    }} align-items-{{ horizontal }}"
+  >
     <ng-content></ng-content>
   </div>
 </section>

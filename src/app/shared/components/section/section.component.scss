@@ -1,5 +1,10 @@
 @import "src/variables";
 
+section {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .content {
   padding-top: $header-space;
 }

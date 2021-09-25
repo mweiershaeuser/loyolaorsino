@@ -7,7 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class SectionComponent {
   @Input() fullHeight = false;
+  @Input() horizontal: 'start' | 'center' | 'end' = 'start';
+  @Input() vertical: 'start' | 'center' | 'end' = 'start';
   @Input() background: string = 'white';
+  @Input() bgPosition: string = '0% 0%';
 
   constructor() {}
 }
