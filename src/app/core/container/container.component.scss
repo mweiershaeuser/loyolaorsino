@@ -5,7 +5,10 @@ header {
 }
 
 /* Necessary for Flexbox to work: https://medium.com/@stephenbunch/how-to-make-a-scrollable-container-with-dynamic-height-using-flexbox-5914a26ae336 */
-.container-wrapper,
-.content {
+.wrapper {
   min-height: 0;
+}
+
+.content-footer-wrapper {
+  min-height: 100%;
 }

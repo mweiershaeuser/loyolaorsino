@@ -1,8 +1,19 @@
-<div class="container-wrapper d-flex flex-column vw-100 vh-100">
+<div class="wrapper d-flex flex-column vw-100 vh-100">
   <header>
     <loy-header></loy-header>
   </header>
-  <div class="content flex-grow-1 overflow-auto">
-    <loy-content></loy-content>
+  <div class="wrapper flex-grow-1 overflow-auto">
+    <div
+      class="
+        content-footer-wrapper
+        w-100
+        d-flex
+        flex-column
+        justify-content-between
+      "
+    >
+      <loy-content></loy-content>
+      <loy-footer></loy-footer>
+    </div>
   </div>
 </div>

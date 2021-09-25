@@ -5,6 +5,7 @@ import { ContentComponent } from './content/content.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { RouterModule } from '@angular/router';
     ContentComponent,
     HeaderComponent,
     MenuComponent,
+    FooterComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [ContainerComponent],
