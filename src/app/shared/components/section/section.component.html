@@ -13,6 +13,7 @@
       vertical
     }} align-items-{{ horizontal }}"
   >
+    <h2 *ngIf="title">{{ title }}</h2>
     <ng-content></ng-content>
   </div>
 </section>

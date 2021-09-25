@@ -6,9 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./section.component.scss'],
 })
 export class SectionComponent {
+  @Input() title?: string;
+
   @Input() fullHeight = false;
   @Input() horizontal: 'start' | 'center' | 'end' = 'start';
   @Input() vertical: 'start' | 'center' | 'end' = 'start';
+
   @Input() background: string = 'white';
   @Input() bgPosition: string = '0% 0%';
 
