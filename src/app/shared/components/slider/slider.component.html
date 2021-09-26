@@ -1,0 +1,9 @@
+<swiper class="w-100 h-100" [config]="swiperConfig">
+  <ng-template *ngFor="let slide of slides" swiperSlide>
+    <ng-template
+      *ngIf="slideTemplate"
+      [ngTemplateOutlet]="slideTemplate"
+      [ngTemplateOutletContext]="{ element: slide }"
+    ></ng-template>
+  </ng-template>
+</swiper>

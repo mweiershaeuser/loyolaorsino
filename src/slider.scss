@@ -1,0 +1,7 @@
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
+
+swiper * {
+  --swiper-theme-color: map-get($theme-colors, "primary");
+}

@@ -1,0 +1,11 @@
+<loy-slider
+  class="w-100"
+  style="min-height: 100%"
+  [slides]="notes"
+  [slideTemplate]="slide"
+>
+  <ng-template #slide let-element="element">
+    <p>{{ element.name }}</p>
+    <p>{{ element.note }}</p>
+  </ng-template>
+</loy-slider>
