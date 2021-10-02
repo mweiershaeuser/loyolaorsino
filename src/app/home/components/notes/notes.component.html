@@ -3,9 +3,28 @@
   style="min-height: 100%"
   [slides]="notes"
   [slideTemplate]="slide"
+  [loop]="true"
+  [autoplay]="true"
+  [pagination]="'bullets'"
+  [dynamicBullets]="true"
 >
   <ng-template #slide let-element="element">
-    <p>{{ element.name }}</p>
-    <p>{{ element.note }}</p>
+    <div
+      class="
+        note
+        d-flex
+        flex-column flex-md-row
+        justify-content-center
+        align-items-center
+        w-100
+        h-100
+      "
+    >
+      <i class="note-icon bi bi-music-note"></i>
+      <div>
+        <p>"{{ element.note }}"</p>
+        <p class="text-secondary">{{ element.name }}</p>
+      </div>
+    </div>
   </ng-template>
 </loy-slider>
