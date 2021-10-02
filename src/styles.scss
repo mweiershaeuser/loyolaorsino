@@ -6,6 +6,10 @@
 
 @import "src/slider";
 
+:root {
+  --swiper-theme-color: #{map-get($theme-colors, "primary")} !important;
+}
+
 *,
 *::before,
 *::after {
