@@ -2,6 +2,7 @@
   "name": "loyolaorsino",
   "version": "0.0.0",
   "scripts": {
+    "prepare": "husky install",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -11,7 +12,8 @@
     "test:coverage": "jest --coverage",
     "lint": "ng lint",
     "format:check": "prettier --check \"./**/*.{js,ts,jsx,tsx,json,css,scss,sass,html}\"",
-    "format:write": "prettier --write \"./**/*.{js,ts,jsx,tsx,json,css,scss,sass,html}\""
+    "format:write": "prettier --write \"./**/*.{js,ts,jsx,tsx,json,css,scss,sass,html}\"",
+    "hooks:pre-commit": "lint-staged --verbose"
   },
   "private": true,
   "dependencies": {
@@ -46,8 +48,10 @@
     "@typescript-eslint/parser": "4.28.2",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.0",
     "jest": "^27.0.6",
     "jest-preset-angular": "^9.0.7",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "typescript": "~4.3.5"
   }
