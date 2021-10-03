@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgxMasonryModule } from 'ngx-masonry';
 
 import { MasonryComponent } from './masonry.component';
 
@@ -9,6 +10,7 @@ describe('MasonryComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [MasonryComponent],
+      imports: [NgxMasonryModule],
     }).compileComponents();
   });
 

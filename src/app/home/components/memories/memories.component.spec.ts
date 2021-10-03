@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgxMasonryModule } from 'ngx-masonry';
+import { MasonryComponent } from 'src/app/shared/components/masonry/masonry.component';
 
 import { MemoriesComponent } from './memories.component';
 
@@ -8,7 +10,8 @@ describe('MemoriesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MemoriesComponent],
+      declarations: [MemoriesComponent, MasonryComponent],
+      imports: [NgxMasonryModule],
     }).compileComponents();
   });
 
