@@ -1,37 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs/operators';
+import Note from '../../models/note.model';
+import { NotesService } from '../../services/notes/notes.service';
 
 @Component({
   selector: 'loy-notes',
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.scss'],
 })
-export class NotesComponent {
-  notes: Array<{ name: string; note: string }> = [
-    {
-      name: 'Max Mustermann',
-      note: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et',
-    },
-    {
-      name: 'Erika Musterfrau',
-      note: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et',
-    },
-    {
-      name: 'Kim Muster',
-      note: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et',
-    },
-    {
-      name: 'Kim Muster',
-      note: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et',
-    },
-    {
-      name: 'Kim Muster',
-      note: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et',
-    },
-    {
-      name: 'Kim Muster',
-      note: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et',
-    },
-  ];
+export class NotesComponent implements OnInit {
+  notes: Note[] = [];
 
-  constructor() {}
+  constructor(private notesService: NotesService) {}
+
+  ngOnInit(): void {
+    this.notesService
+      .getNotes()
+      .pipe(take(1))
+      .subscribe((notes) => {
+        this.notes = notes;
+      });
+  }
 }

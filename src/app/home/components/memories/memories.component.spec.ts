@@ -1,6 +1,8 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { MasonryComponent } from 'src/app/shared/components/masonry/masonry.component';
+import { MemoriesService } from '../../services/memories/memories.service';
 
 import { MemoriesComponent } from './memories.component';
 
@@ -11,7 +13,8 @@ describe('MemoriesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [MemoriesComponent, MasonryComponent],
-      imports: [NgxMasonryModule],
+      imports: [NgxMasonryModule, HttpClientTestingModule],
+      providers: [MemoriesService],
     }).compileComponents();
   });
 
