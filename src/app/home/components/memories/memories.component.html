@@ -1,0 +1,5 @@
+<loy-masonry class="w-100" [masonryItems]="memories" [masonryTemplate]="memory">
+  <ng-template #memory let-element="element">
+    <img class="w-100" [src]="element" />
+  </ng-template>
+</loy-masonry>

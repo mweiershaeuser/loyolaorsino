@@ -1,0 +1,14 @@
+<ngx-masonry [options]="{ gutter: '.gutter-sizer' }">
+  <div class="gutter-sizer"></div>
+  <div
+    class="masonry-item mb-3"
+    ngxMasonryItem
+    *ngFor="let item of masonryItems"
+  >
+    <ng-template
+      *ngIf="masonryTemplate"
+      [ngTemplateOutlet]="masonryTemplate"
+      [ngTemplateOutletContext]="{ element: item }"
+    ></ng-template>
+  </div>
+</ngx-masonry>
