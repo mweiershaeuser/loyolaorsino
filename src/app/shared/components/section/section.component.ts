@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SectionComponent {
   @Input() title?: string;
+  @Input() titleEn?: string;
 
   @Input() fullHeight = false;
   @Input() horizontal: 'start' | 'center' | 'end' = 'start';
