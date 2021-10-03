@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SectionComponent } from 'src/app/shared/components/section/section.component';
 
 import { ImprintComponent } from './imprint.component';
 
@@ -8,7 +9,7 @@ describe('ImprintComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ImprintComponent],
+      declarations: [ImprintComponent, SectionComponent],
     }).compileComponents();
   });
 
