@@ -1,7 +1,6 @@
 @import "src/variables";
 
-.header {
-  position: absolute;
+header {
   height: $header-space;
   z-index: $header-z-index;
 }
