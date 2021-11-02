@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { HeaderService } from '../shared/services/header/header.service';
 
 @Component({
   selector: 'loy-home',
@@ -11,7 +12,10 @@ import { takeUntil } from 'rxjs/operators';
 export class HomeComponent implements OnDestroy, AfterViewInit {
   unsubscribe = new Subject<void>();
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private headerService: HeaderService
+  ) {}
 
   ngAfterViewInit(): void {
     this.route.fragment
@@ -32,5 +36,9 @@ export class HomeComponent implements OnDestroy, AfterViewInit {
   ngOnDestroy(): void {
     this.unsubscribe.next();
     this.unsubscribe.complete();
+  }
+
+  setHeaderColor(color: 'primary' | 'white'): void {
+    this.headerService.setColor(color);
   }
 }

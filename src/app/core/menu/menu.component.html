@@ -7,12 +7,17 @@
     justify-content-right
     align-items-center
   "
+  [ngClass]="'text-' + color"
 >
   <a routerLink="/home">Home</a>
   <a routerLink="/home" fragment="sheet-music">Notenblatt</a>
   <a routerLink="/home" fragment="memories">Erinnerungen</a>
 </div>
-<i class="d-lg-none menu-icon bi bi-list" (click)="toggleMenu()"></i>
+<i
+  class="d-lg-none menu-icon bi bi-list"
+  [ngClass]="'text-' + color"
+  (click)="toggleMenu()"
+></i>
 
 <div
   [ngClass]="{
@@ -26,7 +31,7 @@
     <div class="menu-header d-flex justify-content-between w-100">
       <div class="d-flex h-100 justify-content-left align-items-center"></div>
       <div class="d-flex h-100 justify-content-right align-items-center">
-        <i class="menu-icon bi bi-x" (click)="toggleMenu()"></i>
+        <i class="menu-icon bi bi-x text-primary" (click)="toggleMenu()"></i>
       </div>
     </div>
     <div
