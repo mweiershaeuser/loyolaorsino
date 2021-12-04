@@ -15,6 +15,7 @@ export class SectionComponent {
 
   @Input() background: string = 'white';
   @Input() bgPosition: string = '0% 0%';
+  @Input() bgBlend: string = 'normal';
 
   constructor() {}
 }

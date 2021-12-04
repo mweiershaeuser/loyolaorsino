@@ -6,9 +6,15 @@ import { HomeComponent } from './home.component';
 import { SharedModule } from '../shared/shared.module';
 import { NotesComponent } from './components/notes/notes.component';
 import { MemoriesComponent } from './components/memories/memories.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
-  declarations: [HomeComponent, NotesComponent, MemoriesComponent],
+  declarations: [
+    HomeComponent,
+    NotesComponent,
+    MemoriesComponent,
+    AboutComponent,
+  ],
   imports: [CommonModule, HomeRoutingModule, SharedModule],
 })
 export class HomeModule {}
