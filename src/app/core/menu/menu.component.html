@@ -10,6 +10,7 @@
   [ngClass]="'text-' + color"
 >
   <a routerLink="/home">Home</a>
+  <a routerLink="/home" fragment="about">About</a>
   <a routerLink="/home" fragment="sheet-music">Notenblatt</a>
   <a routerLink="/home" fragment="memories">Erinnerungen</a>
 </div>
@@ -46,6 +47,10 @@
       "
     >
       <a routerLink="/home" (click)="toggleMenu()">Home</a>
+
+      <hr />
+
+      <a routerLink="/home" fragment="about" (click)="toggleMenu()"> About </a>
 
       <hr />
 
