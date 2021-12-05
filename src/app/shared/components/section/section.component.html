@@ -1,8 +1,5 @@
 <section
-  class="px-4 d-flex"
-  [ngClass]="{
-    'min-vh-100': fullHeight
-  }"
+  class="px-4 d-flex min-vh-100"
   [ngStyle]="{
     background: background,
     'background-position': bgPosition,
@@ -12,10 +9,23 @@
   <div
     class="content w-100 d-flex flex-column justify-content-{{
       vertical
-    }} align-items-{{ horizontal }}"
+    }} align-items-{{ horizontal }} text-{{ textColor }}"
   >
     <h2 *ngIf="title">{{ title }}</h2>
-    <p *ngIf="titleEn" class="text-secondary fst-italic">{{ titleEn }}</p>
+    <p
+      *ngIf="titleEn"
+      class="fst-italic"
+      [ngClass]="{
+        'text-secondary': textColor !== 'white'
+      }"
+    >
+      {{ titleEn }}
+    </p>
     <ng-content></ng-content>
   </div>
+  <div
+    #anker
+    class="intersection-anker"
+    [attr.data-header-color]="headerColor"
+  ></div>
 </section>

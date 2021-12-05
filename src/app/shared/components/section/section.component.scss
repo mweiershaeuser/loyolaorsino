@@ -1,10 +1,18 @@
 @import "src/variables";
 
 section {
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .content {
   padding-top: $header-space;
+}
+
+.intersection-anker {
+  position: absolute;
+  top: 95vh;
+  width: 1px;
+  height: 1px;
 }
