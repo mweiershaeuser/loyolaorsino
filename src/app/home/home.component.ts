@@ -18,6 +18,7 @@ export class HomeComponent implements OnDestroy, AfterViewInit {
   ) {}
 
   ngAfterViewInit(): void {
+    this.setHeaderColor('white');
     this.route.fragment
       .pipe(takeUntil(this.unsubscribe))
       .subscribe((fragment) => {
