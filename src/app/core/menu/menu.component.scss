@@ -1,28 +1,8 @@
-@import "src/variables";
-@import "src/theme";
-
-.menu-icon {
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.menu-header {
-  min-height: $header-space;
-}
-
-/* Necessary for Flexbox to work: https://medium.com/@stephenbunch/how-to-make-a-scrollable-container-with-dynamic-height-using-flexbox-5914a26ae336 */
-.mobile-menu,
-.menu-content {
-  min-height: 0;
-}
-
-/* Desktop Menu */
-
-.desktop-menu a[routerLink] {
+.menu a[routerLink] {
   text-decoration: none;
   margin-left: 10px;
 
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   text-transform: uppercase;
 
@@ -31,7 +11,7 @@
   transition: 0.5s;
 }
 
-.desktop-menu a[routerLink]:after {
+.menu a[routerLink]:after {
   display: block;
   content: "";
   border-bottom: solid 3px;
@@ -39,49 +19,7 @@
   transition: transform 250ms ease-in-out;
 }
 
-.desktop-menu a[routerLink]:hover:after {
+.menu a[routerLink]:hover:after {
   transform: scaleX(1);
   transform-origin: 0% 50%;
-}
-
-/* Mobile Menu */
-
-.menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 0;
-  z-index: $menu-z-index;
-  overflow-y: hidden;
-  transition: 0.5s;
-}
-
-.opened {
-  height: 100vh;
-}
-
-.mobile-menu a[routerLink] {
-  text-decoration: none;
-  padding: 10px;
-  margin: 0;
-
-  font-size: 30px;
-  font-weight: bold;
-  text-transform: uppercase;
-
-  color: map-get($theme-colors, "primary");
-  border: 5px hidden map-get($theme-colors, "primary");
-
-  transition: 0.5s;
-}
-
-.mobile-menu a[routerLink]:hover {
-  border-style: solid;
-}
-
-hr {
-  width: 50px;
-  border-top: 5px solid map-get($theme-colors, "secondary");
-  border-radius: 5px;
 }

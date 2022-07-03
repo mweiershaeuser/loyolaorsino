@@ -7,11 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class MenuComponent {
   @Input() color: 'primary' | 'white' = 'primary';
-  menuOpened = false;
 
   constructor() {}
-
-  toggleMenu(): void {
-    this.menuOpened = !this.menuOpened;
-  }
 }
