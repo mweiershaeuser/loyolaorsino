@@ -1,12 +1,13 @@
 <p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et
+  Wenn du auch an Loyolas Komposition mitirken möchtest, schicke gern ein paar
+  Takte an <a href="mailto:memory@loyolaorsino.com">memory@loyolaorsino.com</a>,
+  damit wir deine Note zu seinem Lied hinzufügen können.
 </p>
 <p class="text-secondary fst-italic">
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et
+  If you would like to contribute to Loyola's composition, you are welcome to
+  send us a few words to
+  <a href="mailto:memory@loyolaorsino.com">memory@loyolaorsino.com</a> so that
+  we can add your note to his song.
 </p>
 
 <loy-slider
@@ -19,17 +20,9 @@
 >
   <ng-template #slide let-element="element">
     <div
-      class="
-        note
-        d-flex
-        flex-column flex-md-row
-        justify-content-center
-        align-items-center
-        w-100
-        h-100
-      "
+      class="note d-flex flex-column gap-4 flex-md-row justify-content-center align-items-center w-100 h-100"
     >
-      <i class="note-icon bi bi-music-note"></i>
+      <i class="note-icon bi bi-music-note-beamed"></i>
       <div>
         <p>"{{ element.note }}"</p>
         <p class="text-secondary">{{ element.name }}</p>
