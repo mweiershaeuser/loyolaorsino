@@ -19,7 +19,7 @@ export class NotesService {
   getNotes(): Observable<Note[]> {
     return this.http
       .get(
-        `${this.baseUrl}/spaces/${this.spaceId}/environments/${this.environmentId}/entries?content_type=note`,
+        `${this.baseUrl}/spaces/${this.spaceId}/environments/${this.environmentId}/entries?content_type=note&order=sys.createdAt`,
         {
           headers: {
             Authorization: `Bearer ${this.apiKey}`,
