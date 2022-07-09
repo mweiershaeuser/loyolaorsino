@@ -37,7 +37,6 @@ export class SliderComponent implements OnInit {
       autoplay: this.autoplay
         ? {
             delay: 2500,
-            disableOnInteraction: false,
           }
         : false,
     };
