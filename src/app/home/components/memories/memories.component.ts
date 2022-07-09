@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs/operators';
+import { shuffle } from 'src/app/shared/helpers/shuffle.helpers';
 import { MemoriesService } from '../../services/memories/memories.service';
 
 @Component({
@@ -17,7 +18,7 @@ export class MemoriesComponent implements OnInit {
       .getMemories()
       .pipe(take(1))
       .subscribe((memories) => {
-        this.memories = memories;
+        this.memories = shuffle(memories);
       });
   }
 }
