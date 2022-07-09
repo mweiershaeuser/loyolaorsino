@@ -25,6 +25,14 @@ body {
   overflow-x: hidden;
 }
 
+.underline-hover {
+  text-decoration: none;
+}
+
+.underline-hover:hover {
+  text-decoration: underline;
+}
+
 /* Masonry */
 
 .masonry-item {
