@@ -61,6 +61,10 @@ body {
   .gutter-sizer {
     width: 2%;
   }
+
+  .note-width {
+    width: 75%;
+  }
 }
 
 @include media-breakpoint-up(xxl) {

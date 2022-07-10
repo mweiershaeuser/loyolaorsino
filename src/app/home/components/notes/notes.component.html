@@ -19,13 +19,15 @@
   [dynamicBullets]="true"
 >
   <ng-template #slide let-element="element">
-    <div
-      class="note d-flex flex-column gap-4 flex-md-row justify-content-center align-items-center w-100 h-100"
-    >
-      <i class="note-icon bi bi-music-note-beamed"></i>
-      <div>
-        <p>"{{ element.note }}"</p>
-        <p class="text-secondary">{{ element.name }}</p>
+    <div class="d-flex justify-content-center align-items-center w-100 h-100">
+      <div
+        class="note note-width d-flex flex-column gap-4 flex-md-row justify-content-center align-items-center"
+      >
+        <i class="note-icon bi bi-music-note-beamed"></i>
+        <div>
+          <p>"{{ element.note }}"</p>
+          <p class="text-secondary">{{ element.name }}</p>
+        </div>
       </div>
     </div>
   </ng-template>
