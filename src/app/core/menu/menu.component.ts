@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Colour } from 'src/colour.types';
 
 @Component({
   selector: 'loy-menu',
@@ -6,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  @Input() color: 'primary' | 'white' = 'primary';
+  @Input() colour: Colour = 'primary';
 
   constructor() {}
 }

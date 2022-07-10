@@ -9,14 +9,14 @@
   <div
     class="content w-100 d-flex flex-column justify-content-{{
       vertical
-    }} align-items-{{ horizontal }} text-{{ textColor }}"
+    }} align-items-{{ horizontal }} text-{{ textColour }}"
   >
     <h2 *ngIf="title">{{ title }}</h2>
     <p
       *ngIf="titleEn"
       class="fst-italic"
       [ngClass]="{
-        'text-secondary': textColor !== 'white'
+        'text-secondary': textColour !== 'white'
       }"
     >
       {{ titleEn }}
@@ -26,6 +26,6 @@
   <div
     #anker
     class="intersection-anker"
-    [attr.data-header-color]="headerColor"
+    [attr.data-header-colour]="headerColour"
   ></div>
 </section>

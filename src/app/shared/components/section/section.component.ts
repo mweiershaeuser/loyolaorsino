@@ -6,6 +6,7 @@ import {
   OnDestroy,
   ViewChild,
 } from '@angular/core';
+import { Colour } from 'src/colour.types';
 import { HeaderService } from '../../services/header/header.service';
 
 @Component({
@@ -26,9 +27,9 @@ export class SectionComponent implements AfterViewInit, OnDestroy {
   @Input() bgPosition: string = '0% 0%';
   @Input() bgBlend: string = 'normal';
 
-  @Input() textColor: 'primary' | 'white' = 'primary';
+  @Input() textColour: Colour = 'primary';
 
-  @Input() headerColor: 'primary' | 'white' = 'primary';
+  @Input() headerColour: Colour = 'primary';
 
   constructor(private headerService: HeaderService) {}
 
