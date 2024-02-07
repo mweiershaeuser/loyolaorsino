@@ -1,6 +1,6 @@
 services:
   loyolaorsino:
-    image: ghcr.io/mweiershaeuser/loyolaorsino
+    image: ghcr.io/mweiershaeuser/loyolaorsino:1.0.0
     restart: always
     networks:
       - traefik_net
