@@ -2,8 +2,11 @@ name: Build and Push Images
 
 on:
   push:
+    tags:
+      - "v*.*.*"
+  pull_request:
     branches:
-      - develop
+      - main
 
 env:
   REGISTRY: ghcr.io
@@ -32,7 +35,8 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=raw,value=latest
+            type=semver,pattern={{version}}
+            type=ref,event=pr
 
       - name: Log into registry ${{ env.REGISTRY }}
         if: github.event_name != 'pull_request'

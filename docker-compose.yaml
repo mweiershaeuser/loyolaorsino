@@ -1,5 +1,5 @@
 services:
-  frontend:
+  loyolaorsino:
     image: ghcr.io/mweiershaeuser/loyolaorsino
     restart: always
     networks:
