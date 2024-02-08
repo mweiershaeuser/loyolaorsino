@@ -1,12 +1,13 @@
 services:
   loyolaorsino:
+    container_name: loyolaorsino
     image: ghcr.io/mweiershaeuser/loyolaorsino:1.0.0
     restart: always
     networks:
       - traefik_net
     labels:
       - traefik.enable=true
-      - traefik.http.routers.loyolaorsino.rule=Host('loyolaorsino.com')
+      - traefik.http.routers.loyolaorsino.rule=Host(`loyolaorsino.com`)
 
 networks:
   traefik_net:
