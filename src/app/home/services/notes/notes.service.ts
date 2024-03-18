@@ -24,7 +24,7 @@ export class NotesService {
           headers: {
             Authorization: `Bearer ${this.apiKey}`,
           },
-        }
+        },
       )
       .pipe(map((res: any) => res.items.map((item: any) => item.fields)));
   }

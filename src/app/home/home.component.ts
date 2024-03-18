@@ -15,7 +15,7 @@ export class HomeComponent implements OnDestroy, AfterViewInit {
 
   constructor(
     private route: ActivatedRoute,
-    private headerService: HeaderService
+    private headerService: HeaderService,
   ) {}
 
   ngAfterViewInit(): void {

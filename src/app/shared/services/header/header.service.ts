@@ -14,7 +14,7 @@ export class HeaderService {
       entries.forEach((e) => {
         if (e.isIntersecting) {
           this.colour$.next(
-            (e.target as HTMLElement).dataset.headerColour as Colour
+            (e.target as HTMLElement).dataset.headerColour as Colour,
           );
         }
       });

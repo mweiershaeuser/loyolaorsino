@@ -23,10 +23,10 @@ export class MemoriesService {
           headers: {
             Authorization: `Bearer ${this.apiKey}`,
           },
-        }
+        },
       )
       .pipe(
-        map((res: any) => res.items.map((item: any) => item.fields.file.url))
+        map((res: any) => res.items.map((item: any) => item.fields.file.url)),
       );
   }
 }
