@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { Colour } from 'src/colour.types';
+import { BehaviorSubject } from 'rxjs';
+import { Colour } from '../../../../colour.types';
 
 @Injectable({
   providedIn: 'root',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs/operators';
-import { shuffle } from 'src/app/shared/helpers/shuffle.helpers';
+import { shuffle } from '../../../shared/helpers/shuffle.helpers';
 import { MemoriesService } from '../../services/memories/memories.service';
 
 @Component({

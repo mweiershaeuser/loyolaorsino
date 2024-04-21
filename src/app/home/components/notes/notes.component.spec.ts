@@ -1,6 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SliderComponent } from 'src/app/shared/components/slider/slider.component';
+import { SliderComponent } from '../../../shared/components/slider/slider.component';
 import { NotesService } from '../../services/notes/notes.service';
 
 import { NotesComponent } from './notes.component';

@@ -6,7 +6,7 @@ import {
   OnDestroy,
   ViewChild,
 } from '@angular/core';
-import { Colour, colours } from 'src/colour.types';
+import { Colour, colours } from '../../../../colour.types';
 import { HeaderService } from '../../services/header/header.service';
 
 @Component({
