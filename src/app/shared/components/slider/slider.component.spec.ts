@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SliderComponent } from './slider.component';
+import { SliderModule } from './slider.module';
 
 describe('SliderComponent', () => {
   let component: SliderComponent;
@@ -8,7 +9,7 @@ describe('SliderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SliderComponent],
+      imports: [SliderModule],
     }).compileComponents();
   });
 

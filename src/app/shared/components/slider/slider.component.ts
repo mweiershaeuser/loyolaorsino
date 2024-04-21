@@ -1,12 +1,5 @@
 import { Component, Input, OnInit, TemplateRef } from '@angular/core';
-import SwiperCore, {
-  SwiperOptions,
-  Navigation,
-  Pagination,
-  Autoplay,
-} from 'swiper';
-
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+import { SwiperOptions } from 'swiper/types';
 
 @Component({
   selector: 'loy-slider',
@@ -34,11 +27,7 @@ export class SliderComponent implements OnInit {
         dynamicBullets: this.dynamicBullets,
       },
       loop: this.loop,
-      autoplay: this.autoplay
-        ? {
-            delay: 2500,
-          }
-        : false,
+      autoplay: this.autoplay,
     };
   }
 }
