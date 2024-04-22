@@ -1,0 +1,9 @@
+@import "src/theme";
+
+swiper-container::part(button-prev) {
+  color: $primary;
+}
+
+swiper-container::part(button-next) {
+  color: $primary;
+}

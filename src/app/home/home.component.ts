@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { Colour } from 'src/colour.types';
+import { Colour } from '../../colour.types';
 import { HeaderService } from '../shared/services/header/header.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class HomeComponent implements OnDestroy, AfterViewInit {
 
   constructor(
     private route: ActivatedRoute,
-    private headerService: HeaderService
+    private headerService: HeaderService,
   ) {}
 
   ngAfterViewInit(): void {

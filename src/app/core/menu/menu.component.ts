@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Colour } from 'src/colour.types';
+import { Colour } from '../../../colour.types';
 
 @Component({
   selector: 'loy-menu',

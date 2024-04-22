@@ -88,10 +88,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "loyolaorsino:build:production"
+              "buildTarget": "loyolaorsino:build:production"
             },
             "development": {
-              "browserTarget": "loyolaorsino:build:development"
+              "buildTarget": "loyolaorsino:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,7 +99,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "loyolaorsino:build"
+            "buildTarget": "loyolaorsino:build"
           }
         },
         "lint": {
@@ -111,8 +111,16 @@
       }
     }
   },
-  "defaultProject": "loyolaorsino",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": ["@angular-eslint/schematics"],
+    "analytics": false
+  },
+  "schematics": {
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    },
+    "@angular-eslint/schematics:library": {
+      "setParserOptionsProject": true
+    }
   }
 }

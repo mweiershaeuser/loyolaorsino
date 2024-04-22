@@ -1,9 +1,9 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SliderComponent } from 'src/app/shared/components/slider/slider.component';
 import { NotesService } from '../../services/notes/notes.service';
 
 import { NotesComponent } from './notes.component';
+import { SliderModule } from '../../../shared/components/slider/slider.module';
 
 describe('NotesComponent', () => {
   let component: NotesComponent;
@@ -11,8 +11,8 @@ describe('NotesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NotesComponent, SliderComponent],
-      imports: [HttpClientTestingModule],
+      declarations: [NotesComponent],
+      imports: [HttpClientTestingModule, SliderModule],
       providers: [NotesService],
     }).compileComponents();
   });

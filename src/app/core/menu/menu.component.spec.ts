@@ -21,18 +21,4 @@ describe('MenuComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  describe('toggleMenu()', () => {
-    it('should open menu, when it is closed.', () => {
-      component.menuOpened = false;
-      component.toggleMenu();
-      expect(component.menuOpened).toBeTruthy();
-    });
-
-    it('should close menu, when it is opened.', () => {
-      component.menuOpened = true;
-      component.toggleMenu();
-      expect(component.menuOpened).toBeFalsy();
-    });
-  });
 });

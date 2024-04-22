@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../../environments/environment';
 import Note from '../../models/note.model';
 
 @Injectable({
@@ -24,7 +24,7 @@ export class NotesService {
           headers: {
             Authorization: `Bearer ${this.apiKey}`,
           },
-        }
+        },
       )
       .pipe(map((res: any) => res.items.map((item: any) => item.fields)));
   }

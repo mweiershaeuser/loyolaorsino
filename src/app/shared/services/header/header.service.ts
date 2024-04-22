@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { Colour } from 'src/colour.types';
+import { BehaviorSubject } from 'rxjs';
+import { Colour } from '../../../../colour.types';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +14,7 @@ export class HeaderService {
       entries.forEach((e) => {
         if (e.isIntersecting) {
           this.colour$.next(
-            (e.target as HTMLElement).dataset.headerColour as Colour
+            (e.target as HTMLElement).dataset.headerColour as Colour,
           );
         }
       });

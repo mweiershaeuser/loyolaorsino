@@ -1,9 +1,15 @@
-<swiper class="w-100" [config]="swiperConfig">
-  <ng-template *ngFor="let slide of slides" swiperSlide>
+<swiper-container
+  class="w-100"
+  [navigation]="swiperConfig.navigation"
+  [pagination]="swiperConfig.pagination"
+  [loop]="swiperConfig.loop"
+  [autoplay]="swiperConfig.autoplay"
+>
+  <swiper-slide *ngFor="let slide of slides">
     <ng-template
       *ngIf="slideTemplate"
       [ngTemplateOutlet]="slideTemplate"
       [ngTemplateOutletContext]="{ element: slide }"
     ></ng-template>
-  </ng-template>
-</swiper>
+  </swiper-slide>
+</swiper-container>

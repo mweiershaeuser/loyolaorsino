@@ -1,4 +1,3 @@
-Object.defineProperty(window, 'CSS', { value: null });
 Object.defineProperty(document, 'doctype', {
   value: '<!DOCTYPE html>',
 });
@@ -22,3 +21,26 @@ Object.defineProperty(document.body.style, 'transform', {
     };
   },
 });
+window.IntersectionObserver = class IntersectionObserver {
+  readonly root: Element | null;
+
+  readonly rootMargin: string;
+
+  readonly thresholds: ReadonlyArray<number>;
+
+  constructor() {
+    this.root = null;
+    this.rootMargin = '';
+    this.thresholds = [];
+  }
+
+  disconnect() {}
+
+  observe() {}
+
+  takeRecords(): IntersectionObserverEntry[] {
+    return [];
+  }
+
+  unobserve() {}
+};

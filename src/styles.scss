@@ -1,14 +1,11 @@
 @import "src/fonts";
 
-@import "src/theme";
 @import "src/bootstrap";
 
 @import "src/variables";
 
-@import "src/slider";
-
 :root {
-  --swiper-theme-color: #{map-get($theme-colors, "primary")} !important;
+  --swiper-pagination-color: black !important;
 }
 
 *,
