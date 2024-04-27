@@ -6,7 +6,6 @@ import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { SliderModule } from '../shared/components/slider/slider.module';
 import { AboutComponent } from './components/about/about.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { MemoriesComponent } from './components/memories/memories.component';
 import { MasonryComponent } from '../shared/components/masonry/masonry.component';
 import { NgxMasonryMock } from '../shared/components/masonry/ngx-masonry.mock';
@@ -26,11 +25,7 @@ describe('HomeComponent', () => {
         MasonryComponent,
         NgxMasonryMock,
       ],
-      imports: [
-        RouterModule.forRoot([]),
-        HttpClientTestingModule,
-        SliderModule,
-      ],
+      imports: [RouterModule.forRoot([]), SliderModule],
     }).compileComponents();
   });
 

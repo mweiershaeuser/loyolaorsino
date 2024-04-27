@@ -46,3 +46,5 @@ Thumbs.db
 
 .angular/cache
 .nx/cache
+
+memories.json

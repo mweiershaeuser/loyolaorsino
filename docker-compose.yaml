@@ -1,7 +1,7 @@
 services:
   loyolaorsino:
     container_name: loyolaorsino
-    image: ghcr.io/mweiershaeuser/loyolaorsino:1.0.1
+    image: ghcr.io/mweiershaeuser/loyolaorsino:1.1.0
     restart: always
     networks:
       - traefik_net

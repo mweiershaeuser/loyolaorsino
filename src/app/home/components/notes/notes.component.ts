@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { take } from 'rxjs/operators';
 import Note from '../../models/note.model';
-import { NotesService } from '../../services/notes/notes.service';
+
+import notes from '../../../../assets/notes.json';
 
 @Component({
   selector: 'loy-notes',
@@ -9,16 +9,11 @@ import { NotesService } from '../../services/notes/notes.service';
   styleUrls: ['./notes.component.scss'],
 })
 export class NotesComponent implements OnInit {
-  notes: Note[] = [];
+  notes: Note[] = notes;
 
-  constructor(private notesService: NotesService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.notesService
-      .getNotes()
-      .pipe(take(1))
-      .subscribe((notes) => {
-        this.notes = notes;
-      });
+    this.notes = notes;
   }
 }
