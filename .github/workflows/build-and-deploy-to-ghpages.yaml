@@ -35,7 +35,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: npm ci
-      - run: npm run build
+      - run: npm run build -- --base-href /
       - run: cp ./dist/loyolaorsino/index.html ./dist/loyolaorsino/404.html
       - run: npm run test
       - name: Upload artifact
