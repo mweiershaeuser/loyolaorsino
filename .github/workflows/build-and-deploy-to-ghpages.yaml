@@ -36,6 +36,7 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build -- --base-href /loyolaorsino/
+      - run: cp ./dist/loyolaorsino/index.html ./dist/loyolaorsino/404.html
       - run: npm run test
       - name: Upload artifact
         if: github.event_name != 'pull_request'
