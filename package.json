@@ -4,16 +4,16 @@
   "scripts": {
     "prepare": "husky",
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "build:test-server": "ng build --configuration test-server",
-    "watch": "ng build --watch --configuration development",
+    "start": "npm run imageJson && ng serve",
+    "build": "npm run imageJson && ng build",
+    "watch": "npm run imageJson && ng build --watch --configuration development",
+    "imageJson": "node getImageJson.mjs",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "ng lint",
-    "format:check": "prettier --check \"./**/*.{js,ts,jsx,tsx,json,css,scss,sass,html}\"",
-    "format:write": "prettier --write \"./**/*.{js,ts,jsx,tsx,json,css,scss,sass,html}\"",
+    "format:check": "prettier --check \"./**/*.{js,mjs,ts,jsx,tsx,json,css,scss,sass,html}\"",
+    "format:write": "prettier --write \"./**/*.{js,mjs,ts,jsx,tsx,json,css,scss,sass,html}\"",
     "hooks:pre-commit": "lint-staged --verbose"
   },
   "dependencies": {

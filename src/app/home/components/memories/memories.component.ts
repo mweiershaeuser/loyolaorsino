@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { take } from 'rxjs/operators';
 import { shuffle } from '../../../shared/helpers/shuffle.helpers';
-import { MemoriesService } from '../../services/memories/memories.service';
+
+import memories from '../../../../assets/memories/memories.json';
 
 @Component({
   selector: 'loy-memories',
@@ -11,14 +11,9 @@ import { MemoriesService } from '../../services/memories/memories.service';
 export class MemoriesComponent implements OnInit {
   memories: string[] = [];
 
-  constructor(private memoriesService: MemoriesService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.memoriesService
-      .getMemories()
-      .pipe(take(1))
-      .subscribe((memories) => {
-        this.memories = shuffle(memories);
-      });
+    this.memories = shuffle(memories.map((m) => `assets/memories/${m}`));
   }
 }
